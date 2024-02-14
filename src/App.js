@@ -8,7 +8,7 @@ import {useEffect, useState} from "react";
 import SkinnyBar from "./components/Navbar/SkinnyBar";
 
 const ContentWrapper = styled.div`
-  width: calc(100vh - 100px);
+  width: ${props => props.ismenuopen ? "calc(100vh - 100px)" : "100%"};
   margin: auto;
 `;
 const AppWrapper = styled.div`
@@ -106,14 +106,13 @@ function App() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-    console.log('hi')
   }, []);
 
   return (
       <AppWrapper>
         <BrowserRouter>
         <Navbar isMenuOpen={isMenuOpen} windowSizeChange={windowSizeChange}/>
-        <ContentWrapper>
+        <ContentWrapper ismenuopen={isMenuOpen}>
           <PictureFrame>
             <OuterBorder>
               <MidBorder>
@@ -124,9 +123,8 @@ function App() {
                   <CornerLeftBottom src="https://i.ibb.co/4mKvK3N/corner-decoration.jpg"/>
                   <Container>
                     <Routes>
-                      <Route path="/" exact element={<HomePage />} />
-                      <Route path="/contact_us" element={<ContactPage />} />
-                      <Route path="/intro" element={<IntroPage />} />
+                      <Route path="/" element={<IntroPage ismenuopen={isMenuOpen}/>} />
+                      <Route path="/contact_us" element={<ContactPage ismenuopen={isMenuOpen} />} />
                     </Routes>
                   </Container>
                 </InnerBorder>

@@ -1,7 +1,7 @@
 export const MenuItems = [
   { label: "About us", path: "/about_us", open: false,
     children: [
-      { label: "Intro", path: "/intro"},
+      { label: "Intro", path: "/"},
       { label: "Contact us", path: "/contact_us"},
     ]
   },

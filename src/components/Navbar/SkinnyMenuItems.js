@@ -1,5 +1,5 @@
 export const SkinnyMenuItems = [
-  { label: "Intro", path: "/intro"},
+  { label: "Intro", path: "/"},
   { label: "Contact us", path: "/contact_us"},
   { label: "Food menu", path: "/food_menu"},
   { label: "Beverages", path: "/beverages"},
