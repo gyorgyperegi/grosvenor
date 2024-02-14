@@ -124,6 +124,7 @@ function App() {
                   <Container>
                     <Routes>
                       <Route path="/" element={<IntroPage ismenuopen={isMenuOpen}/>} />
+                      <Route path="/grosvenor" element={<IntroPage ismenuopen={isMenuOpen}/>} />
                       <Route path="/contact_us" element={<ContactPage ismenuopen={isMenuOpen} />} />
                     </Routes>
                   </Container>
