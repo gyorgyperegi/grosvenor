@@ -8,6 +8,8 @@ const SubMenuWrapper = styled.div`
   border-radius: 0 0 6px 6px;
   box-shadow: 0 4px 2px 1px #DE9B72;
   border: 1px solid black;
+  background: #043343;
+  z-index: 1;
 `;
 const SubMenuItem = styled.div`
   width: 100px;
@@ -20,7 +22,6 @@ const SubMenus = ({ items, position, handleNavigate }) => {
   return (
     <SubMenuWrapper className={"subMenus"} position={position}>
       {items.map((item,index) => {
-        console.log(item)
         return(
           <>
             <SubMenuItem onClick={() => handleNavigate(item.path)}>

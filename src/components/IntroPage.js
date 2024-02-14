@@ -29,7 +29,7 @@ const Field = styled.p`
 const IntroPage = () => {
   return (
     <Container className={"introPage"}>
-      <h1 style={{display: "flex", justifyContent: "center"}}>Intro Page</h1>
+      <h1 style={{display: "flex", justifyContent: "center", marginBottom: "30px"}}>Intro Page</h1>
       <ContentWrapper>
         <RowWrapper>
           <Tag>Vision:</Tag>
