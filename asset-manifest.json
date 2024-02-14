@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/grosvenor/static/css/main.1a86dc71.css",
-    "main.js": "/grosvenor/static/js/main.aa1fb8d2.js",
+    "main.js": "/grosvenor/static/js/main.d7e37d76.js",
     "static/media/winelogo.png": "/grosvenor/static/media/winelogo.eeb7782ff367eb122e3e.png",
     "index.html": "/grosvenor/index.html",
     "main.1a86dc71.css.map": "/grosvenor/static/css/main.1a86dc71.css.map",
-    "main.aa1fb8d2.js.map": "/grosvenor/static/js/main.aa1fb8d2.js.map"
+    "main.d7e37d76.js.map": "/grosvenor/static/js/main.d7e37d76.js.map"
   },
   "entrypoints": [
     "static/css/main.1a86dc71.css",
-    "static/js/main.aa1fb8d2.js"
+    "static/js/main.d7e37d76.js"
   ]
 }
