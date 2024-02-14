@@ -106,6 +106,7 @@ function App() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+    console.log('hi')
   }, []);
 
   return (
