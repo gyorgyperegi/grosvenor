@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: calc(100vh - 150px);
+  width: ${props => props.ismenuopen ? "calc(100vh - 150px)" : "100%"};
   height: 100%;
 `;
 const ContentWrapper = styled.div`
@@ -16,32 +16,44 @@ const RowWrapper = styled.div`
   display: flex;
   position: relative;
   margin-bottom: 20px;
+
+    @media (max-width: 478px) {
+        flex-direction: column;
+    }
 `;
 const Tag = styled.p`
-  font-size: 20px;
-  font-weight: 600;
-  margin-right: 40px;
+    font-size: ${props => props.ismenuopen ? "20px" : "16px"};
+    font-weight: 600;
+    margin-right: 20px;
+
+    @media (max-width: 478px) {
+        font-size: 14px;
+    }
 `;
 const Field = styled.p`
-  font-size: 20px;
-  font-weight: 400;
+    font-size: ${props => props.ismenuopen ? "20px" : "16px"};
+    font-weight: 400;
+
+    @media (max-width: 478px) {
+        font-size: 14px;
+    }
 `;
-const Contact = () => {
+const Contact = ({ismenuopen}) => {
   return (
-    <Container className={"contact"}>
+    <Container ismenuopen={ismenuopen} className={"contact"}>
       <h1 style={{display: "flex", justifyContent: "center"}}>Contact Page</h1>
       <ContentWrapper>
-        <RowWrapper>
-          <Tag>Saloon Manager:</Tag>
-          <Field>Adam Varga</Field>
+        <RowWrapper ismenuopen={ismenuopen}>
+          <Tag ismenuopen={ismenuopen}>Saloon Manager:</Tag>
+          <Field ismenuopen={ismenuopen}>Adam Varga</Field>
         </RowWrapper>
-        <RowWrapper>
-          <Tag>Email:</Tag>
-          <Field>adam.varga@thelittlesaloon.com</Field>
+        <RowWrapper ismenuopen={ismenuopen}>
+          <Tag ismenuopen={ismenuopen}>Email:</Tag>
+          <Field ismenuopen={ismenuopen}>adam.varga@thelittlesaloon.com</Field>
         </RowWrapper>
-        <RowWrapper>
-          <Tag>Post. Address:</Tag>
-          <Field>SE28 8HT, 5 Curlew Close</Field>
+        <RowWrapper ismenuopen={ismenuopen}>
+          <Tag ismenuopen={ismenuopen}>Post. Address:</Tag>
+          <Field ismenuopen={ismenuopen}>SE28 8HT, 5 Curlew Close</Field>
         </RowWrapper>
       </ContentWrapper>
     </Container>

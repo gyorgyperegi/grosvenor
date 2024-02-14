@@ -55,7 +55,12 @@ const Navbar = ({isMenuOpen, windowSizeChange}) => {
   const compareSharedItemLengths = shareRefs.current.length !== reStructuredList.length;
   const navigate = useNavigate();
 
-  const handleNavigate = (path) => {
+  const handleNavigate = (path,skinnySub) => {
+    if(skinnySub) {
+      setIsSubMenuOpen(false)
+    } else {
+      updateMenuItems(-1)
+    }
     navigate(path);
   }
 
@@ -93,8 +98,6 @@ const Navbar = ({isMenuOpen, windowSizeChange}) => {
   const openSkinnySubMenus = (skinnyRef) => {
     setIsSubMenuOpen(!isSubMenuOpen)
     setSkinnySubPosition(skinnyRef?.current?.getBoundingClientRect().left - 50)
-    console.log(skinnyRef.current)
-    console.log(skinnyRef?.current?.getBoundingClientRect().left)
   };
 
   return (
@@ -120,7 +123,7 @@ const Navbar = ({isMenuOpen, windowSizeChange}) => {
           : (
             <>
               <SkinnyBar handleClick={(skinnyRef) => openSkinnySubMenus(skinnyRef)}/>
-              {isSubMenuOpen && (<SubMenus items={skinnyItemsList} position={skinnySubPosition} handleNavigate={(path) => handleNavigate(path)}/>)}
+              {isSubMenuOpen && (<SubMenus items={skinnyItemsList} position={skinnySubPosition} handleNavigate={(path) => handleNavigate(path,true)}/>)}
             </>
           )
         }

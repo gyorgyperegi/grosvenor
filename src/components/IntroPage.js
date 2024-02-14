@@ -10,10 +10,11 @@ const ContentWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  padding-left: 50px;
+  padding-left: 30px;
 `;
 const RowWrapper = styled.div`
   display: flex;
+  position: relative;
   margin-bottom: 20px;
 `;
 const Tag = styled.p`
